@@ -1,0 +1,11 @@
+<ul *ngFor="let category of categories">
+    <a (click)="changeCategory(category)">
+        <li>{{category.name}}</li>
+    </a>
+    <ul>
+        <li>description {{category.description}}</li>
+    </ul>
+</ul>
+<div *ngIf="activeCategory">
+    <app-product-list [products]="activeCategory.products"></app-product-list>
+</div>

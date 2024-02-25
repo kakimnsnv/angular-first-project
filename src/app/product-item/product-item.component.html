@@ -1,0 +1,41 @@
+<div class="product" *ngIf="product">
+    <div class="product-image">
+        <div class="image-container">
+            <img *ngFor="let image of product.images" [src]="image" alt="{{product.name}}">
+        </div>
+    </div>
+    <div class="product-details">
+        <h3>
+            <a [title]="product.name + 'details'" [routerLink]="['/products', product.id]">
+                {{ product.name }}
+            </a>
+        </h3>
+        <p *ngIf="product.description">Description: {{ product.description }}</p>
+        <p>Price: {{ product.price }}</p>
+        <p>Rating: {{product.rating}}</p>
+        <p>Likes: {{product.likes}}</p>
+        <p>
+            <button type="button" (click)="like(product)">
+                like
+            </button>
+        </p>
+        <p>
+            <button type="button" (click)="share(product.link)">
+                Share on WatsApp
+            </button>
+        </p>
+
+        <p>
+            <button type="button" (click)="sharetg(product.link)">
+                Share on Telegram
+            </button>
+        </p>
+        <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+
+        <p>
+            <button type="button" (click)="notify.emit()">
+                remove
+            </button>
+        </p>
+    </div>
+</div>

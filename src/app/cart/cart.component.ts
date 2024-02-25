@@ -9,6 +9,9 @@ import { FormBuilder } from '@angular/forms';
 })
 export class CartComponent {
 
+  name : String=  "";
+  address : String = "";
+
   items = this.cartService.getItems();
 
   checkoutForm = this.formBuilder.group({name: '', address: ''});
@@ -19,8 +22,16 @@ export class CartComponent {
   }
 
   onSubmit(): void {
-    this.items = this.cartService.clearCart();
-    console.warn('Your order has been submitted', this.checkoutForm.value);
-    this.checkoutForm.reset();
+    console.log(this.checkoutForm.controls['name']);
+
+    if(this.name != "" && this.address != ""){
+      this.items = this.cartService.clearCart();
+      console.warn('Your order has been submitted', this.checkoutForm.value);
+      this.checkoutForm.reset();
+      this.name = '';
+      this.address = '';
+    }else{
+      window.alert('Please fill in your name and address');
+    }
   }
 }
