@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Category, categories } from "../categories";
+import { Category, categories } from "../../_models/categories";
 
 @Component({
   selector: "app-category",

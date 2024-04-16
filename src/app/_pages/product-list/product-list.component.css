@@ -1,0 +1,11 @@
+.product-box{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

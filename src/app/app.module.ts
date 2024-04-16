@@ -4,15 +4,15 @@ import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { TopBarComponent } from "./top-bar/top-bar.component";
-import { ProductListComponent } from "./product-list/product-list.component";
-import { ProductAlertsComponent } from "./product-alerts/product-alerts.component";
-import { ProductDetailsComponent } from "./product-details/product-details.component";
-import { ShippingComponent } from "./shipping/shipping.component";
-import { CartComponent } from "./cart/cart.component";
+import { TopBarComponent } from "./_pages/top-bar/top-bar.component";
+import { ProductListComponent } from "./_pages/product-list/product-list.component";
+import { ProductAlertsComponent } from "./_pages/product-alerts/product-alerts.component";
+import { ProductDetailsComponent } from "./_pages/product-details/product-details.component";
+import { ShippingComponent } from "./_pages/shipping/shipping.component";
+import { CartComponent } from "./_pages/cart/cart.component";
 import { HttpClientModule } from "@angular/common/http";
-import { ProductItemComponent } from "./product-item/product-item.component";
-import { CategoryComponent } from "./category/category.component";
+import { ProductItemComponent } from "./_pages/product-item/product-item.component";
+import { CategoryComponent } from "./_pages/category/category.component";
 
 @NgModule({
   imports: [
